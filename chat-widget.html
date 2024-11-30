@@ -8,18 +8,15 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
     <div id="chat-widget" class="fixed bottom-4 right-4">
-        <button id="chat-redirect" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 shadow-lg transition-colors duration-200">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <a href="https://chatgpt.com/g/g-9kR0G64S4-aura-by-aspd-alpha-v2" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-block bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 shadow-lg transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
-            <span class="sr-only">Open Chat</span>
-        </button>
+            <span class="sr-only">Open Chat in New Window</span>
+        </a>
     </div>
-
-    <script>
-        document.getElementById('chat-redirect').addEventListener('click', function() {
-            window.location.href = 'https://chatgpt.com/g/g-9kR0G64S4-aura-by-aspd-alpha-v2';
-        });
-    </script>
 </body>
 </html>
