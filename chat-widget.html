@@ -1,4 +1,4 @@
-<div id="chat-widget" style="position: fixed; bottom: 80px; right: 14px; display: flex; flex-direction: column; align-items: center; font-family: Arial, sans-serif;">
+<div id="chat-widget" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; font-family: Arial, sans-serif; z-index: 9999;">
     <span id="chat-text" style="color: #3b82f6; font-weight: bold; font-size: 0.875rem; margin-bottom: 0.5rem;">Chat with AURA</span>
     <a href="https://chatgpt.com/g/g-9kR0G64S4-aura-by-aspd-alpha-v2" 
        target="_blank" 
@@ -18,11 +18,27 @@
 
         setInterval(() => {
             time += 0.1;
-            const x = Math.sin(time) * 5; // Horizontal movement
-            const y = Math.cos(time) * 3; // Vertical movement
+            const x = Math.sin(time) * 5;
+            const y = Math.cos(time) * 3;
             text.style.transform = `translate(${x}px, ${y}px)`;
         }, 50);
     }
 
+    function positionWidget() {
+        const widget = document.getElementById('chat-widget');
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            widget.style.bottom = '60px'; // Adjust this value as needed for mobile
+        } else {
+            widget.style.bottom = '20px'; // Default bottom position for desktop
+        }
+    }
+
+    // Run on page load
     animateText();
+    positionWidget();
+
+    // Reposition on window resize
+    window.addEventListener('resize', positionWidget);
 </script>
