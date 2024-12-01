@@ -6,7 +6,8 @@
     <title>Chat Redirect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-		{
+        /* Ensure Tailwind's preflight styles don't interfere with our specific styles */
+        #chat-widget * {
             box-sizing: border-box;
         }
     </style>
@@ -22,6 +23,7 @@
             </svg>
             <span class="sr-only">Open Chat in New Window</span>
         </a>
+        <span class="text-blue-500 font-bold text-sm">ASPD_AURA</span>
     </div>
 </body>
 </html>
