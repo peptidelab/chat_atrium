@@ -1,4 +1,4 @@
 # chat_atrium
-chatbox for moolde iframe
+chat_ATRiUM.html: currently used for chatbox for ASCEND 1/2025 / Blended Learning Module
 
-currently also used on front face of ASPD website
+chat-widget.html: currently also used on front face of ASPD website
